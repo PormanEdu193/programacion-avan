@@ -16,9 +16,11 @@ public class BeanServlet extends HttpServlet {
 
 	@EJB
 	SessionBean sessionbean; 
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String name = request.getParameter("name");
 		PrintWriter out = response.getWriter();
-		out.println(sessionbean.Ejemplo());
+		out.append("Mensaje desde EJB: ").append(sessionbean.Ejemplo(name));
 	}
 
 

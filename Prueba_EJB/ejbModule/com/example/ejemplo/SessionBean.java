@@ -8,7 +8,7 @@ import jakarta.ejb.Stateless;
 @LocalBean
 public class SessionBean {
 	
-        public String Ejemplo() {
-        	return "Metodo de ejemplo de bean";
+        public String Ejemplo(String name) {
+        	return "Hola "+ name + " tu nombre paso por EJB";
         }
 }
